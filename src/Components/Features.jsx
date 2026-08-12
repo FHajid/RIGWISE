@@ -1,7 +1,7 @@
 import { Cpu, Lock, BarChart3, Radio } from 'lucide-react';
 
 const features = [
-  {
+{
     icon: Radio,
     title: "Edge Telemetry Aggregation",
     desc: "Stream high-frequency sensor data directly from asset controllers with zero packet loss in remote environments."
