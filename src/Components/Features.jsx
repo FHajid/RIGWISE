@@ -1,56 +1,46 @@
-import { Cpu, Lock, BarChart3, Radio } from 'lucide-react';
-
 const features = [
-{
-    icon: Radio,
-    title: "Edge Telemetry Aggregation",
-    desc: "Stream high-frequency sensor data directly from asset controllers with zero packet loss in remote environments."
+  {
+    number: "01",
+    title: "Edge Telemetry",
+    desc: "Stream high-frequency controller data with zero packet loss in remote conditions."
   },
   {
-    icon: Cpu,
-    title: "Predictive Failure Detection",
-    desc: "Machine learning models analyze acoustic and thermal signatures to flag component degradation before outages occur."
+    number: "02",
+    title: "Predictive Failure",
+    desc: "Machine learning algorithms flag acoustic and thermal anomalies prior to outage."
   },
   {
-    icon: BarChart3,
-    title: "Automated Compliance Logging",
-    desc: "Generate audit-ready regulatory reports and environmental safety documentation automatically."
+    number: "03",
+    title: "Automated Logging",
+    desc: "Generate audit-ready regulatory compliance reports automatically."
   },
   {
-    icon: Lock,
-    title: "Enterprise Security Architecture",
-    desc: "End-to-end encrypted pipelines meeting SOC2 Type II and ISO 27001 standards for critical infrastructure."
+    number: "04",
+    title: "Enterprise Security",
+    desc: "End-to-end encrypted architecture meeting strict SOC2 Type II standards."
   }
 ];
 
 export default function Features() {
   return (
-    <section className="py-20 bg-white border-b border-slate-200">
+    <section className="bg-white border-b border-slate-200 py-16">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}
-        <div className="max-w-2xl">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">
-            <span className="w-6 h-[2px] bg-cyan-600" />
-            Core Capabilities
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
-            Built for High-Stakes Operations
+        <div className="flex items-center justify-between pb-6 border-b border-slate-200">
+          <h2 className="text-xs font-mono uppercase tracking-widest text-slate-400">
+            System Capabilities
           </h2>
+          <span className="text-xs font-mono text-slate-400">04 CORE MODULES</span>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+        {/* Minimal Grid List */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-slate-200 border-b border-slate-200">
           {features.map((item, idx) => (
-            <div 
-              key={idx} 
-              className="p-6 bg-slate-50 border border-slate-200 hover:border-slate-300 transition-all duration-200"
-            >
-              <div className="p-2.5 bg-slate-950 text-cyan-400 w-fit">
-                <item.icon className="w-5 h-5 stroke-[2]" />
-              </div>
-              <h3 className="text-base font-bold text-slate-950 mt-5">{item.title}</h3>
-              <p className="text-slate-600 text-sm mt-2 leading-relaxed">{item.desc}</p>
+            <div key={idx} className="py-8 md:py-0 md:px-6 first:pl-0 last:pr-0">
+              <span className="text-xs font-mono text-slate-400">{item.number}</span>
+              <h3 className="text-base font-bold text-slate-950 mt-3">{item.title}</h3>
+              <p className="text-xs text-slate-500 mt-2 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

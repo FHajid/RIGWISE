@@ -1,27 +1,64 @@
 import { ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
-return (
-    <section className="bg-white text-slate-900 border-b border-slate-200">
-    <div className="max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row items-center gap-12">
-        <div className="flex-1">
-        <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-            Real-Time Telemetry & AI for Critical Infrastructure
-        </h1>
-        <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            Rigwise is a cutting-edge telemetry and AI platform designed for high-stakes operations. Our solution enables real-time monitoring, predictive analytics, and automated compliance reporting for critical infrastructure.
-        </p>
-        <div className="mt-8 flex gap-4">
-            <a href="#demo" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg from-cyan-500 to-blue-600 text-white font-semibold text-sm hover:brightness-110 shadow-lg shadow-cyan-500/25 transition-all">
-            Schedule Demo
-            <ArrowUpRight className="w-4 h-4 " />
-            </a>
-            <a href="#learn" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 text-slate-700 font-semibold text-sm hover:bg-slate-100 transition-all">
-            Learn More
-            </a>
+  return (
+    <section className="bg-white border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-6 pt-24 pb-16">
+        
+        {/* Editorial Headline */}
+        <div className="max-w-4xl">
+          <p className="text-xs font-mono tracking-widest text-slate-400 uppercase mb-4">
+            Rigwise // Operations Platform
+          </p>
+          <h1 className="text-4xl sm:text-6xl font-black text-slate-950 tracking-tight leading-[1.05]">
+            Intelligent asset telemetry for zero-downtime energy operations.
+          </h1>
         </div>
+
+        {/* Action Row */}
+        <div className="mt-10 pt-8 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <p className="text-sm text-slate-500 max-w-xl leading-relaxed">
+            Unify real-time edge monitoring, compliance logging, and predictive maintenance across global operations in a single stream.
+          </p>
+
+          <button className="inline-flex items-center justify-center gap-3 px-6 py-3 bg-slate-950 text-white font-medium text-sm hover:bg-slate-800 transition-colors shrink-0">
+            <span>Schedule Demo</span>
+            <ArrowUpRight className="w-4 h-4 text-cyan-400" />
+          </button>
         </div>
+
+        {/* Minimal Metrics Grid */}
+        <div className="mt-16 pt-8 border-t border-slate-200 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <div className="text-3xl sm:text-4xl font-extrabold text-slate-950 font-mono tracking-tight">
+              99.8%
+            </div>
+            <div className="text-xs font-mono text-slate-500 mt-1 uppercase">Fleet Availability</div>
+          </div>
+
+          <div>
+            <div className="text-3xl sm:text-4xl font-extrabold text-slate-950 font-mono tracking-tight">
+              $1.4M
+            </div>
+            <div className="text-xs font-mono text-slate-500 mt-1 uppercase">Avg. NPT Saved / Yr</div>
+          </div>
+
+          <div>
+            <div className="text-3xl sm:text-4xl font-extrabold text-slate-950 font-mono tracking-tight">
+              &lt;15ms
+            </div>
+            <div className="text-xs font-mono text-slate-500 mt-1 uppercase">Edge Sync Latency</div>
+          </div>
+
+          <div>
+            <div className="text-3xl sm:text-4xl font-extrabold text-slate-950 font-mono tracking-tight">
+              ISO 27001
+            </div>
+            <div className="text-xs font-mono text-slate-500 mt-1 uppercase">Encrypted Pipeline</div>
+          </div>
         </div>
+
+      </div>
     </section>
-);
+  );
 }
